@@ -49,22 +49,12 @@ public abstract class Player extends Participant {
 		// initialising player variables
 		int playerScore = this.getHand().getScore();
 		int numPlayerCards = this.getHand().getCards().size();
-		boolean isPlayerBlackjack = false;
-
-		// checking for player blackjack
-		if (playerScore == 21 && numPlayerCards == 2) {
-			isPlayerBlackjack = true;
-		}
+		boolean isPlayerBlackjack = (playerScore == 21 && numPlayerCards == 2); // checking for player blackjack
 
 		// initialising dealer variables
 		int dealerScore = dealerHand.getScore();
 		int numDealerCards = dealerHand.getCards().size();
-		boolean isDealerBlackjack = false;
-
-		// checking for dealer blackjack
-		if (dealerScore == 21 && numDealerCards == 2) {
-			isDealerBlackjack = true;
-		}
+		boolean isDealerBlackjack = (dealerScore == 21 && numDealerCards == 2); // checking for dealer blackjack
 
 		/* ----- CHECKING WIN CONDITIONS! ---- */
 		if (isPlayerBlackjack && !isDealerBlackjack) {

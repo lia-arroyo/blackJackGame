@@ -9,7 +9,7 @@ import nz.ac.auckland.se281.a3.Player;
 public class Bot extends Player {
 
 	/* INSTANCE VARIABLES */
-	BotStrategy strategy;
+	private BotStrategy strategy;
 
 	/**
 	 * This constructor sets the bot's strategy and the bot's name.

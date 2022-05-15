@@ -99,11 +99,11 @@ public class BlackJack {
 
 	/**
 	 * This method is only called once. It initializes the Dealer and passes in the
-	 * initial strategy.
+	 * initial strategy and the list of players.
 	 * 
 	 */
 	protected void initDealer() {
-		dealer = new Dealer("Dealer", new BidderStrategy());
+		dealer = new Dealer("Dealer", new BidderStrategy(), players);
 	}
 
 	/**
