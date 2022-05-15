@@ -75,16 +75,19 @@ public class BlackJack {
 	}
 
 	/**
-	 * TODO This method initializes the Bots, you should change this method for
-	 * Task1
+	 * This method will initiate the two bots based on the user's chosen strategy
+	 * and add them to the list of players.
+	 * 
 	 */
 	protected void initBots() {
+		String botStrategyString = getBotStrategy();
+
 		Bot bot1 = new Bot("Bot1");
 		Bot bot2 = new Bot("Bot2");
-		// String botStrategyString = getBotStrategy(); // UNCOMMENT THIS
+
 		// create and set Bots strategy here
-		players.add(bot1);
-		players.add(bot2);
+		players.add(bot1); // DO NOT REMOVE OR CHANGE THIS
+		players.add(bot2); // DO NOT REMOVE OR CHANGE THIS
 	}
 
 	/**
