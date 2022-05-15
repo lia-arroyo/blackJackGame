@@ -6,6 +6,7 @@ import java.util.List;
 import nz.ac.auckland.se281.a3.bot.Bot;
 import nz.ac.auckland.se281.a3.bot.BotStrategy;
 import nz.ac.auckland.se281.a3.bot.BotStrategyFactory;
+import nz.ac.auckland.se281.a3.dealer.BidderStrategy;
 import nz.ac.auckland.se281.a3.dealer.Dealer;
 
 /**
@@ -96,12 +97,12 @@ public class BlackJack {
 	}
 
 	/**
-	 * TODO This method initializes the Dealer, you should change this method for
-	 * Task2
+	 * This method is only called once. It initializes the Dealer and passes in the
+	 * initial strategy.
+	 * 
 	 */
 	protected void initDealer() {
-		// set the initial strategy using the Strategy pattern
-		dealer = new Dealer("Dealer");
+		dealer = new Dealer("Dealer", new BidderStrategy());
 	}
 
 	/**

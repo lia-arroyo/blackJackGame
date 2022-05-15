@@ -10,8 +10,17 @@ import nz.ac.auckland.se281.a3.Participant;
  */
 public class Dealer extends Participant {
 
-	public Dealer(String name) {
+	DealerStrategy strategy;
+
+	/**
+	 * This constructor takes in the initial strategy and the name.
+	 * 
+	 * @param name     name of the dealer
+	 * @param strategy the initial strategy
+	 */
+	public Dealer(String name, DealerStrategy strategy) {
 		super(name);
+		this.strategy = strategy;
 	}
 
 	@Override
