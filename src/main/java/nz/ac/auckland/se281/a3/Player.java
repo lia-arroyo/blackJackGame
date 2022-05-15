@@ -24,7 +24,7 @@ public abstract class Player extends Participant {
 	 * This method acts like a setter method for the number of wins. It increments
 	 * whenever a player has won.
 	 */
-	public void playerWon() {
+	public void win() {
 		numberOfWins++;
 	}
 
@@ -36,7 +36,7 @@ public abstract class Player extends Participant {
 	 * This method acts like a setter method for the number of losses. It increments
 	 * whenever a player has lost.
 	 */
-	public void playerLost() {
+	public void lose() {
 		numberOfLosses++; // acts as a setter method for num losses
 	}
 

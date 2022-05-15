@@ -21,14 +21,12 @@ public class RiskHighStrategy implements BotStrategy {
 	 */
 	@Override
 	public int chooseBet() {
-		// initialising the bets to 50
-		int chosenBet = 50;
 
 		// creating an instance of the JDK Random class.
 		Random rand = new Random();
 
 		// creating the randomly generated value from 50 to 100 (inclusive)
-		chosenBet = rand.nextInt(51) + 50; // nextInt generates value between 0-50, so +50 forces it to be within range
+		int chosenBet = rand.nextInt(51) + 50; // nextInt generates value between 0-50, so +50 forces to be within range
 
 		// returning the randomly generated value
 		return chosenBet;

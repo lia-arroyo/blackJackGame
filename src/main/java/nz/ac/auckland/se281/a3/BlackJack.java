@@ -129,10 +129,10 @@ public class BlackJack {
 			// changes status string if player won
 			if (win) {
 				status = "won";
-				player.playerWon(); // increments player's num wins
+				player.win(); // increments player's num wins
 
 			} else {
-				player.playerLost(); // increments player's num losses
+				player.lose(); // increments player's num losses
 			}
 
 			// checking if the player's net win is >= 2

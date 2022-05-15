@@ -13,14 +13,14 @@ public class BotStrategyFactory {
 
 		// creates an instance of a strategy depending on user's input, & returns it.
 		switch (chosenStrategy) {
-		case "R": // Random
+		case "R":
 			return new RandomStrategy();
-		case "LR": // Low risk
+		case "LR":
 			return new RiskLowStrategy();
-		case "HR": // High risk
+		case "HR":
 			return new RiskHighStrategy();
 		default:
-			return null; // returns null otherwise
+			return null;
 		}
 
 	}

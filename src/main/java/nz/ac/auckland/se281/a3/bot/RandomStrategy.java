@@ -23,14 +23,11 @@ public class RandomStrategy implements BotStrategy {
 	@Override
 	public int chooseBet() {
 
-		// initialising the bets to 1
-		int chosenBet = 1;
-
 		// creating an instance of the JDK Random class.
 		Random rand = new Random();
 
 		// creating the randomly generated value from 1 to 100 chips (inclusive)
-		chosenBet = rand.nextInt(100) + 1; // nextInt generates a value between 0-99, so +1 forces it to be within range
+		int chosenBet = rand.nextInt(100) + 1; // nextInt generates a value between 0-99, so +1 forces it to be within range
 
 		// returning the randomly generated value
 		return chosenBet;
