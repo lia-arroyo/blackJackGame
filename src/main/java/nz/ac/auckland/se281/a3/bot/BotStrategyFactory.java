@@ -1,7 +1,5 @@
 package nz.ac.auckland.se281.a3.bot;
 
-import nz.ac.auckland.se281.a3.Hand;
-
 public class BotStrategyFactory {
 
 	/**
@@ -12,15 +10,15 @@ public class BotStrategyFactory {
 	 * @param hand the bot's current hand
 	 * @return an instance of the chosen strategy
 	 */
-	public static BotStrategy chooseBotStrategy(String chosenStrategy, Hand hand) {
+	public static BotStrategy chooseBotStrategy(String chosenStrategy, Bot bot) {
 
 		switch (chosenStrategy) {
 		case "R":
 			return new RandomStrategy();
 		case "LR":
-			return new RiskLowStrategy(hand);
+			return new RiskLowStrategy();
 		case "HR":
-			return new RiskHighStrategy(hand);
+			return new RiskHighStrategy();
 		default:
 			return null;
 		}

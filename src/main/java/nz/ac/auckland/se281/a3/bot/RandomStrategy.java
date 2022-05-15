@@ -2,6 +2,7 @@ package nz.ac.auckland.se281.a3.bot;
 
 import java.util.Random;
 
+import nz.ac.auckland.se281.a3.Hand;
 import nz.ac.auckland.se281.a3.Participant;
 import nz.ac.auckland.se281.a3.Participant.Action;
 
@@ -40,10 +41,11 @@ public class RandomStrategy implements BotStrategy {
 	 * {@inheritDoc} This specific method randomly chooses between HOLD and HIT
 	 * action.
 	 * 
+	 * @param hand the bot's current hand
 	 * @return the randomly generated action
 	 */
 	@Override
-	public Action chooseAction() {
+	public Action chooseAction(Hand hand) {
 		// creating an instance of the JDK Random class.
 		Random rand = new Random();
 

@@ -1,5 +1,6 @@
 package nz.ac.auckland.se281.a3.bot;
 
+import nz.ac.auckland.se281.a3.Hand;
 import nz.ac.auckland.se281.a3.Participant;
 
 /**
@@ -22,7 +23,8 @@ public interface BotStrategy {
 	 * This method will decide which action the bot will do (either HIT or HOLD)
 	 * depending on the strategy.
 	 *
+	 * @param hand the current hand of the bot
 	 * @return the action the bot will do
 	 */
-	public Participant.Action chooseAction();
+	public Participant.Action chooseAction(Hand hand);
 }

@@ -8,19 +8,6 @@ import nz.ac.auckland.se281.a3.Participant.Action;
 
 public class RiskLowStrategy implements BotStrategy {
 
-	/* INSTANCE VARIABLES */
-	Hand hand;
-
-	/**
-	 * This constructor ensures that the current hand is passed in, so
-	 * chooseAction() works
-	 * 
-	 * @param hand the bot's current hand.
-	 */
-	public RiskLowStrategy(Hand hand) {
-		this.hand = hand;
-	}
-
 	/**
 	 * {@inheritDoc} This method will randomly bet from 10 to 50 chips (inclusive)
 	 * 
@@ -46,10 +33,11 @@ public class RiskLowStrategy implements BotStrategy {
 	 * {@inheritDoc} This specific method will ensure that the bot HOLDs if the
 	 * current score is at least 17, otherwise it HITs.
 	 * 
+	 * @param hand the bot's current hand
 	 * @return the chosen action depending on current score
 	 */
 	@Override
-	public Action chooseAction() {
+	public Action chooseAction(Hand hand) {
 		// getting the score of current hand
 		int currentScore = hand.getScore();
 
