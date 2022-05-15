@@ -20,8 +20,16 @@ public abstract class Player extends Participant {
 		return numberOfWins;
 	}
 
+	public void playerWon() {
+		numberOfWins++; // acts as a setter method for num wins
+	}
+
 	public int getNumberOfLosses() {
 		return numberOfLosses;
+	}
+
+	public void playerLost() {
+		numberOfLosses++; // acts as a setter method for num losses
 	}
 
 	public int getNetWin() {
