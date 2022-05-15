@@ -22,14 +22,20 @@ public class Bot extends Player {
 		this.strategy = strategy;
 	}
 
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public Action decideAction(Hand hand) {
-		return Action.HOLD;
+		return strategy.chooseAction(hand);
 	}
 
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public int makeABet() {
-		return 1;
+		return strategy.chooseBet();
 	}
 
 }
