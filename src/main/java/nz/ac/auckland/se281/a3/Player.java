@@ -10,7 +10,6 @@ public abstract class Player extends Participant {
 	/* INSTANCE VARIABLES */
 	protected int numberOfWins;
 	protected int numberOfLosses;
-	protected int netWin = numberOfWins - numberOfLosses;
 
 	public Player(String name) {
 		super(name);
@@ -33,7 +32,7 @@ public abstract class Player extends Participant {
 	}
 
 	public int getNetWin() {
-		return netWin;
+		return numberOfWins - numberOfLosses;
 	}
 
 	public abstract int makeABet();

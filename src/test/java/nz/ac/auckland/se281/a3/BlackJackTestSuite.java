@@ -47,7 +47,7 @@ import nz.ac.auckland.se281.a3.bot.Bot;
 @SuiteClasses({ BlackJackTestSuite.Task1Test.class, //
 		BlackJackTestSuite.Task2Test.class, //
 //		BlackJackTestSuite.Task3Test.class, //
-// BlackJackTestSuite.YourTest.class //
+// BlackJackTestSuite.YourTest.class // 
 })
 
 public class BlackJackTestSuite {

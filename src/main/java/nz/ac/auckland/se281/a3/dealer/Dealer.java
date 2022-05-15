@@ -44,7 +44,7 @@ public class Dealer extends Participant {
 	public Action defeatPlayer(Player player, Hand hand) {
 		// player variables
 		int playerScore = player.getHand().getScore();
-		boolean isPlayerBlackjack = (playerScore == 2) && (player.getHand().getCards().size() == 2);
+		boolean isPlayerBlackjack = ((playerScore == 21) && (player.getHand().getCards().size() == 2));
 
 		// dealer variables
 		int dealerScore = hand.getScore();
