@@ -7,17 +7,20 @@ import nz.ac.auckland.se281.a3.Participant;
 import nz.ac.auckland.se281.a3.Player;
 
 /**
- * 
- * You should change this class for Task 2
+ * This class contains all methods and variables related to the dealer of the
+ * game.
  *
+ * @author Lia Arroyo
  */
 public class Dealer extends Participant {
 
+	/* INSTANCE VARIABLES */
 	private DealerStrategy strategy;
 	private List<Player> players;
 
 	/**
-	 * This constructor takes in the initial strategy and the name.
+	 * This constructor takes in the initial strategy, name, and a list of all
+	 * players.
 	 * 
 	 * @param name     name of the dealer
 	 * @param strategy the initial strategy
@@ -51,7 +54,8 @@ public class Dealer extends Participant {
 		// no need to check if dealer is blackjack cos code won't call unless it isn't
 
 		/* DETERMINING BEST ACTION */
-		if (playerScore > 21) { // if player is busted
+		if (playerScore > 21) {
+			// if player is busted
 			return Action.HOLD;
 
 		} else if (!isPlayerBlackjack && (dealerScore >= playerScore)) {

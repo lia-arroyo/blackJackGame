@@ -4,7 +4,8 @@ import nz.ac.auckland.se281.a3.Hand;
 import nz.ac.auckland.se281.a3.Participant;
 
 /**
- * This interface contains all the required methods for each bot strategy.
+ * This interface contains all the required methods and variables for each bot
+ * strategy.
  * 
  * @author Lia Arroyo
  *

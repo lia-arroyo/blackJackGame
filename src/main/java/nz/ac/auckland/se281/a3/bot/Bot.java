@@ -4,7 +4,7 @@ import nz.ac.auckland.se281.a3.Hand;
 import nz.ac.auckland.se281.a3.Player;
 
 /**
- * you should change this class for TASK 1
+ * This class contains all the methods and variables related to the two bots.
  */
 public class Bot extends Player {
 
@@ -23,7 +23,10 @@ public class Bot extends Player {
 	}
 
 	/**
-	 * {@inheritDoc}
+	 * {@inheritDoc} This method uses the strategy to decide which action to take.
+	 * 
+	 * @param hand the bot's current hand
+	 * @return the action chosen
 	 */
 	@Override
 	public Action decideAction(Hand hand) {
@@ -31,7 +34,9 @@ public class Bot extends Player {
 	}
 
 	/**
-	 * {@inheritDoc}
+	 * {@inheritDoc} This method uses the strategy to decide how much to bet.
+	 * 
+	 * @return the chosen amount to bet
 	 */
 	@Override
 	public int makeABet() {

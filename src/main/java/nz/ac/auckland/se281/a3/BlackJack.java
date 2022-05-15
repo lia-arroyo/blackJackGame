@@ -107,8 +107,10 @@ public class BlackJack {
 	}
 
 	/**
-	 * TODO This method prints and updates the results (wins and losses) you should
-	 * change this method for Task 2 and Task 3
+	 * This method prints and updates the results (wins and losses). It also checks
+	 * if dealer needs to change strategy or not
+	 * 
+	 * @param round the current round number
 	 */
 	protected void printAndUpdateResults(int round) {
 
@@ -153,10 +155,15 @@ public class BlackJack {
 	}
 
 	/**
-	 * TODO This method should print the statistic of the game when it ends
+	 * This method prints the statistic of each player in the game when it ends
+	 * 
 	 */
 	protected void printGameStatistics() {
-
+		// iterating through each player
+		for (Player player : players) {
+			System.out.println(player.getName() + " won " + player.getNumberOfWins() + " times and lost "
+					+ player.getNumberOfLosses() + " times");
+		}
 	}
 
 }

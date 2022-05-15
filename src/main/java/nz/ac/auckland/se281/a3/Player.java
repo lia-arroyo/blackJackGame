@@ -1,9 +1,10 @@
 package nz.ac.auckland.se281.a3;
 
 /**
- * 
- * You can (and should) add new fields and/or methods
+ * This abstract class has all the methods and variables related to the Player
+ * object.
  *
+ * @author Lia Arroyo
  */
 public abstract class Player extends Participant {
 
@@ -19,18 +20,32 @@ public abstract class Player extends Participant {
 		return numberOfWins;
 	}
 
+	/**
+	 * This method acts like a setter method for the number of wins. It increments
+	 * whenever a player has won.
+	 */
 	public void playerWon() {
-		numberOfWins++; // acts as a setter method for num wins
+		numberOfWins++;
 	}
 
 	public int getNumberOfLosses() {
 		return numberOfLosses;
 	}
 
+	/**
+	 * This method acts like a setter method for the number of losses. It increments
+	 * whenever a player has lost.
+	 */
 	public void playerLost() {
 		numberOfLosses++; // acts as a setter method for num losses
 	}
 
+	/**
+	 * This method calculates then returns the net win, which is the rounds won -
+	 * rounds lost.
+	 * 
+	 * @return the calculated net win
+	 */
 	public int getNetWin() {
 		return numberOfWins - numberOfLosses;
 	}
@@ -38,10 +53,10 @@ public abstract class Player extends Participant {
 	public abstract int makeABet();
 
 	/**
-	 * This method checks whether the player won against the dealer.
+	 * This helper method checks whether the player won against the dealer.
 	 * 
 	 * @param dealerHand the hand of the dealer, which contains their score
-	 * @return true if player won, and false if player lost
+	 * @return the player's win status. true if player won, and false if player lost
 	 */
 	public boolean didPlayerWin(Hand dealerHand) {
 

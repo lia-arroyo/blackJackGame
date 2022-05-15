@@ -7,7 +7,7 @@ import nz.ac.auckland.se281.a3.Participant;
 import nz.ac.auckland.se281.a3.Participant.Action;
 
 /**
- * This strategy allows for the bot to randomly choose between HOLD and HIT, and
+ * This strategy allows the bot to randomly choose between HOLD and HIT, and
  * randomly bet between 1 and 100 chips.
  * 
  * @author Lia Arroyo
@@ -15,8 +15,8 @@ import nz.ac.auckland.se281.a3.Participant.Action;
 public class RandomStrategy implements BotStrategy {
 
 	/**
-	 * {@inheritDoc} This method will specifically choose a bet between 1 and 100
-	 * chips (inclusive) randomly.
+	 * {@inheritDoc} This specific method will choose a bet between 1 and 100 chips
+	 * (inclusive) randomly.
 	 * 
 	 * @return the random generated bet
 	 */

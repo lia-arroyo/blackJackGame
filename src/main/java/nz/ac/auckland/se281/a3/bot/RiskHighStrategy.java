@@ -6,6 +6,12 @@ import nz.ac.auckland.se281.a3.Hand;
 import nz.ac.auckland.se281.a3.Participant;
 import nz.ac.auckland.se281.a3.Participant.Action;
 
+/**
+ * This strategy allows the bot to be more risky by upping the bet range and
+ * being more strategic with the action it chooses.
+ * 
+ * @author Lia Arroyo
+ */
 public class RiskHighStrategy implements BotStrategy {
 
 	/**

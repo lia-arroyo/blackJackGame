@@ -15,7 +15,7 @@ public interface DealerStrategy {
 	 * This method will choose a player which the dealer will target in one round
 	 * depending on the given strategy
 	 * 
-	 * @param players a list of all players (which contain info about each player)
+	 * @param players list of all players (carries information about each player)
 	 * @return the target player
 	 */
 	public Player chooseTargetPlayer(List<Player> players);

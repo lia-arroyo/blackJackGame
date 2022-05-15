@@ -6,6 +6,12 @@ import nz.ac.auckland.se281.a3.Hand;
 import nz.ac.auckland.se281.a3.Participant;
 import nz.ac.auckland.se281.a3.Participant.Action;
 
+/**
+ * This strategy allows the bot to be less risky when deciding the action, and
+ * bets smaller amounts.
+ * 
+ * @author Lia Arroyo
+ */
 public class RiskLowStrategy implements BotStrategy {
 
 	/**

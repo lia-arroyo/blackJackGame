@@ -5,7 +5,8 @@ import java.util.List;
 import nz.ac.auckland.se281.a3.Player;
 
 /**
- * This dealer strategy intends to target the player with the highest bet amount
+ * This dealer strategy intends to target the player with the highest bet
+ * amount.
  * 
  * @author Lia Arroyo
  *
@@ -41,6 +42,7 @@ public class BidderStrategy implements DealerStrategy {
 			}
 		}
 
+		// returning the instance of the target player
 		return target;
 	}
 
