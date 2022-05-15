@@ -6,7 +6,7 @@ import nz.ac.auckland.se281.a3.Hand;
 import nz.ac.auckland.se281.a3.Participant;
 import nz.ac.auckland.se281.a3.Participant.Action;
 
-public class RiskLowStrategy implements BotStrategy {
+public class RiskHighStrategy implements BotStrategy {
 
 	/* INSTANCE VARIABLES */
 	Hand hand;
@@ -17,25 +17,25 @@ public class RiskLowStrategy implements BotStrategy {
 	 * 
 	 * @param hand the bot's current hand.
 	 */
-	public RiskLowStrategy(Hand hand) {
+	public RiskHighStrategy(Hand hand) {
 		this.hand = hand;
 	}
 
 	/**
-	 * {@inheritDoc} This method will randomly bet from 10 to 50 chips (inclusive)
+	 * {@inheritDoc} This method will randomly bet from 50 to 100 (inclusive)
 	 * 
-	 * @return the randomly generated bet from 10 to 50 chips (inclusive)
+	 * @return the randomly generated bet from 50 to 100 (inclusive)
 	 */
 	@Override
 	public int chooseBet() {
-		// initialising the bets to 10
-		int chosenBet = 10;
+		// initialising the bets to 50
+		int chosenBet = 50;
 
 		// creating an instance of the JDK Random class.
 		Random rand = new Random();
 
-		// creating the randomly generated value from 10 to 50 (inclusive)
-		chosenBet = rand.nextInt(41) + 10; // nextInt generates value between 0-40, so +10 forces it to be within range
+		// creating the randomly generated value from 50 to 100 (inclusive)
+		chosenBet = rand.nextInt(51) + 50; // nextInt generates value between 0-50, so +50 forces it to be within range
 
 		// returning the randomly generated value
 		return chosenBet;
@@ -44,7 +44,7 @@ public class RiskLowStrategy implements BotStrategy {
 
 	/**
 	 * {@inheritDoc} This specific method will ensure that the bot HOLDs if the
-	 * current score is at least 17, otherwise it HITs.
+	 * current score is at least 19, otherwise it HITs.
 	 * 
 	 * @return the chosen action depending on current score
 	 */
@@ -54,7 +54,7 @@ public class RiskLowStrategy implements BotStrategy {
 		int currentScore = hand.getScore();
 
 		// choosing action depending on current score
-		if (currentScore >= 17) {
+		if (currentScore >= 19) {
 			return Participant.Action.HOLD;
 		} else {
 			return Participant.Action.HIT;
