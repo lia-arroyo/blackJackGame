@@ -23,6 +23,10 @@ public class Dealer extends Participant {
 		this.strategy = strategy;
 	}
 
+	public void setStrategy(DealerStrategy strategy) {
+		this.strategy = strategy;
+	}
+
 	@Override
 	public Action decideAction(Hand hand) {
 		return Action.HOLD;

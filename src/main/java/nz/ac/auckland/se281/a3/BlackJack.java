@@ -8,6 +8,7 @@ import nz.ac.auckland.se281.a3.bot.BotStrategy;
 import nz.ac.auckland.se281.a3.bot.BotStrategyFactory;
 import nz.ac.auckland.se281.a3.dealer.BidderStrategy;
 import nz.ac.auckland.se281.a3.dealer.Dealer;
+import nz.ac.auckland.se281.a3.dealer.WinnerStrategy;
 
 /**
  * Unless it is specified in the JavaDoc, you cannot change any methods.
@@ -111,6 +112,9 @@ public class BlackJack {
 	 */
 	protected void printAndUpdateResults(int round) {
 
+		// this boolean is true if any of the players have a net-win >= 2
+		boolean isGoodPlayer = false;
+
 		// iterates through each player in the players list
 		for (Player player : players) {
 
@@ -129,10 +133,22 @@ public class BlackJack {
 				player.playerLost(); // increments player's num losses
 			}
 
+			// checking if the player's net win is >= 2
+			if (player.getNetWin() >= 2) {
+				isGoodPlayer = true;
+			}
+
 			// printing the results of each round
 			System.out.println("Round " + round + ": " + player.getName() + " " + status + " "
 					+ player.getHand().getBet() + " chips");
 
+		}
+
+		// checks if dealer needs to change strategies after each round
+		if (isGoodPlayer) {
+			dealer.setStrategy(new WinnerStrategy());
+		} else {
+			dealer.setStrategy(new BidderStrategy());
 		}
 	}
 
