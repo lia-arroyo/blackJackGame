@@ -8,8 +8,18 @@ import nz.ac.auckland.se281.a3.Player;
  */
 public class Bot extends Player {
 
-	public Bot(String name) {
+	/* INSTANCE VARIABLES */
+	BotStrategy strategy;
+
+	/**
+	 * This constructor sets the bot's strategy and the bot's name.
+	 * 
+	 * @param name     the name of the bot
+	 * @param strategy the instance of the strategy
+	 */
+	public Bot(String name, BotStrategy strategy) {
 		super(name);
+		this.strategy = strategy;
 	}
 
 	@Override

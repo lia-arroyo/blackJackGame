@@ -10,7 +10,7 @@ public class BotStrategyFactory {
 	 * @param hand the bot's current hand
 	 * @return an instance of the chosen strategy
 	 */
-	public static BotStrategy chooseBotStrategy(String chosenStrategy, Bot bot) {
+	public static BotStrategy chooseBotStrategy(String chosenStrategy) {
 
 		switch (chosenStrategy) {
 		case "R":
