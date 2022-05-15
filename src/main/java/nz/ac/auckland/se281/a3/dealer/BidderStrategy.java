@@ -34,6 +34,7 @@ public class BidderStrategy implements DealerStrategy {
 
 			// checking if current player has a greater bet than the max
 			if (currentBet > maxBet) {
+
 				// replace target and max
 				target = currentPlayer;
 				maxBet = currentBet;

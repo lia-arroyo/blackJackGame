@@ -110,6 +110,25 @@ public class BlackJack {
 	 */
 	protected void printAndUpdateResults(int round) {
 
+		// iterates through each player in the players list
+		for (Player player : players) {
+
+			// initialising player status string
+			String status = "lost";
+
+			// checking if player won or not
+			boolean win = player.didPlayerWin(dealer.getHand());
+
+			// changes status string if player won
+			if (win) {
+				status = "won";
+			}
+
+			// printing the results of each round
+			System.out.println("Round " + round + ": " + player.getName() + " " + status + " "
+					+ player.getHand().getBet() + " chips");
+
+		}
 	}
 
 	/**
